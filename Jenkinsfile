@@ -10,10 +10,10 @@ node('maven') {
   stage('Test') {
     parallel(
       "Cart Tests": {
-        sh "curl -s -X POST http://3siksfather:Rlawlgns88!@eap-app.apps.ps.example.com/index.jsp"
+        sh "curl -s -X POST http://eap-app-jenkins.apps.ps.example.com/index.jsp"
       },
       "Discount Tests": {
-        sh "curl -s -X POST http://eap-app.apps.ps.example.com/failover.jsp"
+        sh "curl -s -X POST http://eap-app-jenkins.apps.ps.example.com/failover.jsp"
       }
     )
   }
@@ -28,6 +28,6 @@ node('maven') {
  
   stage('System Test') {
     sh " sleep 30"
-    sh "curl -s http://eap-app.apps.ps.example.com/index.jsp"
+    sh "curl -s http://eap-app-jenkins.apps.ps.example.com/index.jsp"
   }
 }
