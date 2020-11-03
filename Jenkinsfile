@@ -22,7 +22,7 @@ node('maven') {
   }
  
 //  stage('Deploy') {
-//    sh "oc rollout latest dc/eap-app -n sample-ci2"
+//    sh "oc rollout latest dc/eap-app -n jenkins"
 //  }
  
  
